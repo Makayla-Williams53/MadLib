@@ -2,9 +2,14 @@ public class Mad
 {
     String  thing;
 
+    public Mad(String thing)
+    {
+        setThing(thing);
+    }
+
     public Mad()
     {
-        thing = "";
+        this.thing = "";
     }
 
     public String getThing()
@@ -14,13 +19,13 @@ public class Mad
 
     public void setThing(String thing)
     {
-        if(!thing.matches("[a-zA-z][a-z]*"))
+        if(thing.matches("[a-zA-z][a-z]*"))
         {
-            this.thing = "bugs";
+            this.thing = thing;
         }
         else
         {
-            this.thing = thing;
+            this.thing = "bugs";
         }
     }
 }

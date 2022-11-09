@@ -11,14 +11,14 @@ class MadTest
     {
         Mad queen = new Mad();
         assertTrue(queen.getThing().matches(""));
-    }
+    }//end of getQueenThingPass
     @Test
     public void setQueenThingPass()
     {
         Mad queen = new Mad();
         queen.setThing("pokemon");
         assertTrue(queen.getThing().matches("pokemon"));
-    }
+    }//end of setQueenThingPass
 
     //thing fails
     @Test
@@ -27,28 +27,28 @@ class MadTest
         Mad queen = new Mad();
         queen.setThing("AHHH");
         assertTrue(queen.getThing().matches("bugs"));
-    }
+    }//end of setQueenThingUpperFail
     @Test
     public void setQueenThingNumFail()
     {
         Mad queen = new Mad();
         queen.setThing("123");
         assertTrue(queen.getThing().matches("bugs"));
-    }
+    }//end of setQueenThingNumFail
     @Test
     public void setQueenThingBlankFail()
     {
         Mad queen = new Mad();
         queen.setThing("");
         assertTrue(queen.getThing().matches("bugs"));
-    }
+    }//end of setQueenThingBlankFail
     @Test
     public void setQueenThingSpecCharFail()
     {
         Mad queen = new Mad();
         queen.setThing("*/?");
         assertTrue(queen.getThing().matches("bugs"));
-    }
+    }//end of setQueenThingSpecCharFail
 
     //Places Tests
     //places passes
@@ -57,14 +57,15 @@ class MadTest
     {
         Mad queen = new Mad();
         assertTrue(queen.getPlace().matches(""));
-    }
+    }//end of getQueenPlacePass
 
-    public void setQueenPlaceFirstUpPass()
+    @Test
+    public void setQueenPlacePass()
     {
         Mad queen = new Mad();
         queen.setPlace("Bali");
         assertTrue(queen.getPlace().matches("Bali"));
-    }
+    }//end of setQueenPlacePass
 
     //places fail
     @Test
@@ -73,5 +74,5 @@ class MadTest
         Mad queen = new Mad();
         queen.setPlace("bali");
         assertTrue(queen.getPlace().matches("Narnia"));
-    }
+    }//end of setQueenPlaceNoUpFail
 }

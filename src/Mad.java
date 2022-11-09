@@ -28,7 +28,12 @@ public class Mad
 
     public String getPlace()
     {
-        return "";
+        return place;
+    }
+
+    public void setPlace(String place)
+    {
+        this.place = place;
     }
 
 }

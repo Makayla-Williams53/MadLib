@@ -22,6 +22,13 @@ class MadTest
 
     //thing fails
     @Test
+    public void setQueenThingUpperFail()
+    {
+        Mad queen = new Mad();
+        queen.setThing("AHHH");
+        assertTrue(queen.getThing().matches("bugs"));
+    }
+    @Test
     public void setQueenThingNumFail()
     {
         Mad queen = new Mad();
@@ -44,6 +51,7 @@ class MadTest
     }
 
     //Places Tests
+    //places passes
     @Test
     public void getQueenPlacePass()
     {
@@ -51,4 +59,19 @@ class MadTest
         assertTrue(queen.getPlace().matches(""));
     }
 
+    public void setQueenPlaceFirstUpPass()
+    {
+        Mad queen = new Mad();
+        queen.setPlace("Bali");
+        assertTrue(queen.getPlace().matches("Bali"));
+    }
+
+    //places fail
+    @Test
+    public void setQueenPlaceNoUpFail()
+    {
+        Mad queen = new Mad();
+        queen.setPlace("bali");
+        assertTrue(queen.getPlace().matches("Narnia"));
+    }
 }

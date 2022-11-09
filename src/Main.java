@@ -7,7 +7,7 @@ public class Main
         Mad queen = new Mad();
         String temp;
 
-        System.out.println("Please insert a thing (if a word using only letters is not entered \"bugs\" will be the default)");
+        System.out.println("Please insert a thing (if a word using only letters all lowercase is not entered \"bugs\" will be the default)");
         Scanner scanner = new Scanner(System.in);
         temp = scanner.next();
         queen.setThing(temp);

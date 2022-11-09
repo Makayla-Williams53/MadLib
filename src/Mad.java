@@ -12,6 +12,7 @@ public class Mad
         this.thing = "";
         this.place = "";
         this.adverb = "";
+        this.cloth = "";
     }//end of default constructor
 
     public String getThing()
@@ -64,5 +65,21 @@ public class Mad
         }
     }
 
+    public String getCloth()
+    {
+        return cloth;
+    }
+
+    public void setCloth(String cloth)
+    {
+        if(!cloth.matches("[a-z]+"))
+        {
+            this.cloth = "monocle";
+        }
+        else
+        {
+            this.cloth = cloth;
+        }
+    }
 
 }//end of Mad class

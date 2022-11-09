@@ -156,6 +156,43 @@ class MadTest
     {
         Mad queen = new Mad();
         assertTrue(queen.getCloth().matches(""));
+    }//end getQueenClothPass
+    @Test
+    public void setQueenClothPass()
+    {
+        Mad queen = new Mad();
+        queen.setCloth("trousers");
+        assertTrue(queen.getCloth().matches("trousers"));
+    }//end setQueenClothPass
+
+    //tests fail
+    @Test
+    public void setQueenClothUpperFails()
+    {
+        Mad queen = new Mad();
+        queen.setCloth("Trousers");
+        assertTrue(queen.getCloth().matches("monocle"));
+    }
+    @Test
+    public void setQueenClothBlankFails()
+    {
+        Mad queen = new Mad();
+        queen.setCloth("");
+        assertTrue(queen.getCloth().matches("monocle"));
+    }
+    @Test
+    public void setQueenClothNumFails()
+    {
+        Mad queen = new Mad();
+        queen.setCloth("123");
+        assertTrue(queen.getCloth().matches("monocle"));
+    }
+    @Test
+    public void setQueenClothSpecCharFails()
+    {
+        Mad queen = new Mad();
+        queen.setCloth("~/?\\");
+        assertTrue(queen.getCloth().matches("monocle"));
     }
 
 }

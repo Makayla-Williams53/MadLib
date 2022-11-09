@@ -3,12 +3,14 @@ public class Mad
     //instance variables for each user prompt
     private String thing;
     private String place;
+    private String adverb;
 
     //default constructor
     public Mad()
     {
         this.thing = "";
         this.place = "";
+        this.adverb = "";
     }//end of default constructor
 
     public String getThing()
@@ -44,5 +46,15 @@ public class Mad
             this.place = place;
         }//end of else
     }//end of setPlace
+
+    public String getAdverb() {
+        return adverb;
+    }
+
+    public void setAdverb(String adverb)
+    {
+        this.adverb = adverb;
+    }
+
 
 }//end of Mad class

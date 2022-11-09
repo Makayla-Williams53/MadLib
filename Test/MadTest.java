@@ -96,4 +96,20 @@ class MadTest
         queen.setPlace("");
         assertTrue(queen.getPlace().matches("Narnia"));
     }
+
+    //adverb tests
+    //passes
+    @Test
+    public void getQueenAdverbPass()
+    {
+        Mad queen = new Mad();
+        assertTrue(queen.getAdverb().matches(""));
+    }//end getQueenAdverbPass
+    @Test
+    public void setQueenAdverbPass()
+    {
+        Mad queen = new Mad();
+        queen.setAdverb("magically");
+        assertTrue(queen.getAdverb().matches("magically"));
+    }
 }

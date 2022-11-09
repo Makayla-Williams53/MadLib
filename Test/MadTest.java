@@ -5,35 +5,95 @@ import static org.junit.jupiter.api.Assertions.*;
 class MadTest
 {
     //Thing tests
+    //thing passes
     @Test
-    void getQueenThingConstructorPass()
+    public void getQueenThingPass()
     {
-        Mad queen = new Mad("pokemon");
-        assertTrue(queen.getThing() == "pokemon");
-    }
-
+        Mad queen = new Mad();
+        assertTrue(queen.getThing().matches(""));
+    }//end of getQueenThingPass
     @Test
-    void getQueenThingDefaultPass()
+    public void setQueenThingPass()
     {
         Mad queen = new Mad();
         queen.setThing("pokemon");
-        assertTrue(queen.getThing() == "pokemon");
-    }
+        assertTrue(queen.getThing().matches("pokemon"));
+    }//end of setQueenThingPass
 
-    //Fails
+    //thing fails
     @Test
-    void getQueenThingConstructorFailNum()
+    public void setQueenThingUpperFail()
     {
-        Mad queen = new Mad("123");
-        assertTrue(queen.getThing() == "bugs");
-    }
+        Mad queen = new Mad();
+        queen.setThing("AHHH");
+        assertTrue(queen.getThing().matches("bugs"));
+    }//end of setQueenThingUpperFail
+    @Test
+    public void setQueenThingNumFail()
+    {
+        Mad queen = new Mad();
+        queen.setThing("123");
+        assertTrue(queen.getThing().matches("bugs"));
+    }//end of setQueenThingNumFail
+    @Test
+    public void setQueenThingBlankFail()
+    {
+        Mad queen = new Mad();
+        queen.setThing("");
+        assertTrue(queen.getThing().matches("bugs"));
+    }//end of setQueenThingBlankFail
+    @Test
+    public void setQueenThingSpecCharFail()
+    {
+        Mad queen = new Mad();
+        queen.setThing("*/?");
+        assertTrue(queen.getThing().matches("bugs"));
+    }//end of setQueenThingSpecCharFail
+
+    //Places Tests
+    //places passes
+    @Test
+    public void getQueenPlacePass()
+    {
+        Mad queen = new Mad();
+        assertTrue(queen.getPlace().matches(""));
+    }//end of getQueenPlacePass
 
     @Test
-    void getQueenThingConstructorFailChar()
+    public void setQueenPlacePass()
     {
-        Mad queen = new Mad("*/?");
-        assertTrue(queen.getThing() == "bugs");
+        Mad queen = new Mad();
+        queen.setPlace("Bali");
+        assertTrue(queen.getPlace().matches("Bali"));
+    }//end of setQueenPlacePass
+
+    //places fail
+    @Test
+    public void setQueenPlaceNoUpFail()
+    {
+        Mad queen = new Mad();
+        queen.setPlace("bali");
+        assertTrue(queen.getPlace().matches("Narnia"));
+    }//end of setQueenPlaceNoUpFail
+    @Test
+    public void setQueenPlaceNumFail()
+    {
+        Mad queen = new Mad();
+        queen.setPlace("1234");
+        assertTrue(queen.getPlace().matches("Narnia"));
+    }//end of setQueenPlaceNumFail
+    @Test
+    public void setQueenPlaceSpecCharFail()
+    {
+        Mad queen = new Mad();
+        queen.setPlace("?*/~");
+        assertTrue(queen.getPlace().matches("Narnia"));
+    }//end of setQueenPlaceSpecCharFail
+    @Test
+    public void setQueenPlaceBlankFail()
+    {
+        Mad queen = new Mad();
+        queen.setPlace("");
+        assertTrue(queen.getPlace().matches("Narnia"));
     }
-
-
 }

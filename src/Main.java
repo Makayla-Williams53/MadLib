@@ -22,5 +22,12 @@ public class Main
         //get rid of this line later
         System.out.println(queen.getPlace());
 
+        //user input the adverb
+        System.out.println("Please insert and adverb ending in \"ly\" (if a word using only letters with an ending of \"ly\" is not entered \"charismatically\" will be the default");
+        temp = scanner.next();
+        queen.setAdverb(temp);
+        //delete line later
+        System.out.println(queen.getAdverb());
+
     }//end of main method
 }//end of Main class

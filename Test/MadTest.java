@@ -111,9 +111,8 @@ class MadTest
         Mad queen = new Mad();
         queen.setAdverb("magically");
         assertTrue(queen.getAdverb().matches("magically"));
-    }
+    }//end setQueenAdverbPass
 
-    //no-ly, upper, blank, num, spec char
     //fails
     @Test
     public void setQueenAdverbNoLyFail()
@@ -121,34 +120,34 @@ class MadTest
         Mad queen = new Mad();
         queen.setAdverb("cool");
         assertTrue(queen.getAdverb().matches("charismatically"));
-    }
+    }//end setQueenAdverbNoLyFail
     @Test
     public void setQueenAdverbUpperFail()
     {
         Mad queen = new Mad();
         queen.setAdverb("Cool");
         assertTrue(queen.getAdverb().matches("charismatically"));
-    }
+    }//end setQueenAdverbUpperFail
     @Test
     public void setQueenAdverbBlankFail()
     {
         Mad queen = new Mad();
         queen.setAdverb("");
         assertTrue(queen.getAdverb().matches("charismatically"));
-    }
+    }//end setQueenAdverbBlankFail
     @Test
     public void setQueenAdverbNumFail()
     {
         Mad queen = new Mad();
         queen.setAdverb("123");
         assertTrue(queen.getAdverb().matches("charismatically"));
-    }
+    }//end setQueenAdverbNumFail
     @Test
-    public void setQueenAdverbSpechCharFail()
+    public void setQueenAdverbSpecCharFail()
     {
         Mad queen = new Mad();
         queen.setAdverb("~/?");
         assertTrue(queen.getAdverb().matches("charismatically"));
-    }
+    }//end setQueenAdverbSpecCharFail
 
 }

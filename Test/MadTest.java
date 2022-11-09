@@ -12,7 +12,6 @@ class MadTest
         Mad queen = new Mad();
         assertTrue(queen.getThing().matches(""));
     }
-
     @Test
     public void setQueenThingPass()
     {
@@ -27,6 +26,20 @@ class MadTest
     {
         Mad queen = new Mad();
         queen.setThing("123");
+        assertTrue(queen.getThing().matches("bugs"));
+    }
+    @Test
+    public void setQueenThingBlankFail()
+    {
+        Mad queen = new Mad();
+        queen.setThing("");
+        assertTrue(queen.getThing().matches("bugs"));
+    }
+    @Test
+    public void setQueenThingSpecCharFail()
+    {
+        Mad queen = new Mad();
+        queen.setThing("*/?");
         assertTrue(queen.getThing().matches("bugs"));
     }
 

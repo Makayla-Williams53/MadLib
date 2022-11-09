@@ -12,5 +12,5 @@ public class Main
         temp = scanner.next();
         queen.setThing(temp);
         System.out.println(queen.getThing());
-    }
-}
+    }//end of main method
+}//end of Main class

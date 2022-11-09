@@ -35,7 +35,7 @@ public class Mad
 
     public void setPlace(String place)
     {
-        if(!place.matches("[A-Z][a-z*]"))
+        if(!place.matches("[A-Z][a-z]*"))
         {
             this.place = "Narnia";
         }//end of if

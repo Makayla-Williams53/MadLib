@@ -75,4 +75,25 @@ class MadTest
         queen.setPlace("bali");
         assertTrue(queen.getPlace().matches("Narnia"));
     }//end of setQueenPlaceNoUpFail
+    @Test
+    public void setQueenPlaceNumFail()
+    {
+        Mad queen = new Mad();
+        queen.setPlace("1234");
+        assertTrue(queen.getPlace().matches("Narnia"));
+    }//end of setQueenPlaceNumFail
+    @Test
+    public void setQueenPlaceSpecCharFail()
+    {
+        Mad queen = new Mad();
+        queen.setPlace("?*/~");
+        assertTrue(queen.getPlace().matches("Narnia"));
+    }//end of setQueenPlaceSpecCharFail
+    @Test
+    public void setQueenPlaceBlankFail()
+    {
+        Mad queen = new Mad();
+        queen.setPlace("");
+        assertTrue(queen.getPlace().matches("Narnia"));
+    }
 }

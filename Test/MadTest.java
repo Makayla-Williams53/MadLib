@@ -5,35 +5,29 @@ import static org.junit.jupiter.api.Assertions.*;
 class MadTest
 {
     //Thing tests
+    //thing passes
     @Test
-    void getQueenThingConstructorPass()
+    public void getQueenThingPass()
     {
-        Mad queen = new Mad("pokemon");
-        assertTrue(queen.getThing() == "pokemon");
+        Mad queen = new Mad();
+        assertTrue(queen.getThing().matches(""));
     }
 
     @Test
-    void getQueenThingDefaultPass()
+    public void setQueenThingPass()
     {
         Mad queen = new Mad();
         queen.setThing("pokemon");
-        assertTrue(queen.getThing() == "pokemon");
+        assertTrue(queen.getThing().matches("pokemon"));
     }
 
-    //Fails
+    //thing fails
     @Test
-    void getQueenThingConstructorFailNum()
+    public void setQueenThingNumFail()
     {
-        Mad queen = new Mad("123");
-        assertTrue(queen.getThing() == "bugs");
+        Mad queen = new Mad();
+        queen.setThing("123");
+        assertTrue(queen.getThing().matches("bugs"));
     }
-
-    @Test
-    void getQueenThingConstructorFailChar()
-    {
-        Mad queen = new Mad("*/?");
-        assertTrue(queen.getThing() == "bugs");
-    }
-
 
 }

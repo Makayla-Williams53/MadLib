@@ -150,4 +150,12 @@ class MadTest
         assertTrue(queen.getAdverb().matches("charismatically"));
     }//end setQueenAdverbSpecCharFail
 
+    //clothing tests
+    @Test
+    public void getQueenClothPass()
+    {
+        Mad queen = new Mad();
+        assertTrue(queen.getCloth().matches(""));
+    }
+
 }

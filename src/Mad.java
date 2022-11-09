@@ -4,6 +4,7 @@ public class Mad
     private String thing;
     private String place;
     private String adverb;
+    private String cloth;
 
     //default constructor
     public Mad()

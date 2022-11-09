@@ -43,4 +43,12 @@ class MadTest
         assertTrue(queen.getThing().matches("bugs"));
     }
 
+    //Places Tests
+    @Test
+    public void getQueenPlacePass()
+    {
+        Mad queen = new Mad();
+        assertTrue(queen.getPlace().matches(""));
+    }
+
 }

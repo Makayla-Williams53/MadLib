@@ -1,10 +1,12 @@
 public class Mad
 {
     private String thing;
+    private String place;
 
     public Mad()
     {
         this.thing = "";
+        this.place = "";
     }
 
     public String getThing()
@@ -22,6 +24,11 @@ public class Mad
         {
             this.thing = thing;
         }
+    }
+
+    public String getPlace()
+    {
+        return "";
     }
 
 }

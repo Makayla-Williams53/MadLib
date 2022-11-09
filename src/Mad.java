@@ -53,7 +53,14 @@ public class Mad
 
     public void setAdverb(String adverb)
     {
-        this.adverb = adverb;
+        if(!adverb.matches("[a-z]*ly$"))
+        {
+            this.adverb = "charismatically";
+        }
+        else
+        {
+            this.adverb = adverb;
+        }
     }
 
 

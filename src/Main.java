@@ -27,8 +27,6 @@ public class Main
         System.out.println("Please insert a piece of clothing (if a word using only letters all lowercase is not entered \"monocle\" will be the default");
         temp = scanner.next();
         queen.setCloth(temp);
-        //delete later
-        System.out.println(queen.getCloth());
 
     }//end of main method
 }//end of Main class

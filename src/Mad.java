@@ -87,7 +87,19 @@ public class Mad
 
     public String getPhrase()
     {
-        return "";
+        return phrase;
     }//end getPhrase
+
+    public void setPhrase(String phrase)
+    {
+        if(!phrase.matches("\".*\""))
+        {
+            this.phrase = "\"an eye for an eye buckaroo\"";
+        }//end if
+        else
+        {
+            this.phrase = phrase;
+        }//end else
+    }//end setPhrase
 
 }//end of Mad class

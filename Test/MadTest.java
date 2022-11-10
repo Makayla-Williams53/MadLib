@@ -203,5 +203,56 @@ class MadTest
         Mad queen = new Mad();
         assertTrue(queen.getPhrase().matches(""));
     }//end getQueenPhrasePass
+    @Test
+    public void setQueenPhrasePass()
+    {
+        Mad queen = new Mad();
+        queen.setPhrase("\"what goes around comes around\"");
+        assertTrue(queen.getPhrase().matches("\"what goes around comes around\""));
+    }//end setQueenPhrasePass
+    @Test
+    public void setQueenPhraseNumPass()
+    {
+        Mad queen = new Mad();
+        queen.setPhrase("\"123\"");
+        assertTrue(queen.getPhrase().matches("\"123\""));
+    }//end setQueenPhraseNumpass
+    @Test
+    public void setQueenPhraseSpecCharPass()
+    {
+        Mad queen = new Mad();
+        queen.setPhrase("\" %&@ \"");
+        assertTrue(queen.getPhrase().matches("\" %&@ \""));
+    }
+
+    //fails
+    @Test
+    public void setQueenPhraseNoQuoteFail()
+    {
+        Mad queen = new Mad();
+        queen.setPhrase("what goes around comes around");
+        assertTrue(queen.getPhrase().matches("\"an eye for an eye buckaroo\""));
+    }
+    @Test
+    public void setQueenPhraseBlankFail()
+    {
+        Mad queen = new Mad();
+        queen.setPhrase("");
+        assertTrue(queen.getPhrase().matches("\"an eye for an eye buckaroo\""));
+    }//end setQueenPhraseBlankFail
+    @Test
+    public void setQueenPhraseSpecCharNoQuoteFail()
+    {
+        Mad queen = new Mad();
+        queen.setPhrase("~?\\");
+        assertTrue(queen.getPhrase().matches("\"an eye for an eye buckaroo\""));
+    }//end setQueenPhraseSpecCharNoQuoteFail
+    @Test
+    public void setQueenPhraseNumNoQuoteFail()
+    {
+        Mad queen = new Mad();
+        queen.setPhrase("123");
+        assertTrue(queen.getPhrase().matches("\"an eye for an eye buckaroo\""));
+    }//end setQueenPhraseNumNoQuoteFail
 
 }

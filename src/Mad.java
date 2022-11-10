@@ -5,7 +5,6 @@ public class Mad
     private String place;
     private String adverb;
     private String cloth;
-    private String phrase;
 
     //default constructor
     public Mad()
@@ -14,7 +13,6 @@ public class Mad
         this.place = "";
         this.adverb = "";
         this.cloth = "";
-        this.phrase = "";
     }//end of default constructor
 
     public String getThing()
@@ -84,22 +82,5 @@ public class Mad
             this.cloth = cloth;
         }//end else
     }//end setCloth
-
-    public String getPhrase()
-    {
-        return phrase;
-    }//end getPhrase
-
-    public void setPhrase(String phrase)
-    {
-        if(!phrase.matches("\".*\""))
-        {
-            this.phrase = "\"an eye for an eye buckaroo\"";
-        }//end if
-        else
-        {
-            this.phrase = phrase;
-        }//end else
-    }//end setPhrase
 
 }//end of Mad class

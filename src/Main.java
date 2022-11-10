@@ -28,5 +28,6 @@ public class Main
         temp = scanner.next();
         queen.setCloth(temp);
 
+
     }//end of main method
 }//end of Main class

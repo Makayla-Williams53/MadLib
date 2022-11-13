@@ -28,7 +28,7 @@ public class Mad
     {
         if(!thing.matches("[a-z]+"))
         {
-            this.thing = "bugs";
+            this.thing = "bug";
         }//end of if
         else
         {
@@ -111,7 +111,7 @@ public class Mad
 
     public void setThingsPlural(String thingsPlural)
     {
-        if(!thingsPlural.matches("[a-z0-9]+s$"))
+        if(!thingsPlural.matches("[a-z0-9\s]+s$"))
         {
             this.thingsPlural = "pikachus";
         }//end if

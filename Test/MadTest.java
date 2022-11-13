@@ -26,28 +26,28 @@ class MadTest
     {
         Mad queen = new Mad();
         queen.setThing("Pokemon");
-        assertTrue(queen.getThing().matches("bugs"));
+        assertTrue(queen.getThing().matches("bug"));
     }//end of setQueenThingUpperFail
     @Test
     public void setQueenThingNumFail()
     {
         Mad queen = new Mad();
         queen.setThing("123");
-        assertTrue(queen.getThing().matches("bugs"));
+        assertTrue(queen.getThing().matches("bug"));
     }//end of setQueenThingNumFail
     @Test
     public void setQueenThingBlankFail()
     {
         Mad queen = new Mad();
         queen.setThing("");
-        assertTrue(queen.getThing().matches("bugs"));
+        assertTrue(queen.getThing().matches("bug"));
     }//end of setQueenThingBlankFail
     @Test
     public void setQueenThingSpecCharFail()
     {
         Mad queen = new Mad();
         queen.setThing("*/?");
-        assertTrue(queen.getThing().matches("bugs"));
+        assertTrue(queen.getThing().matches("bug"));
     }//end of setQueenThingSpecCharFail
 
     //Places Tests
@@ -271,6 +271,13 @@ class MadTest
         queen.setThingsPlural("1s");
         assertTrue(queen.getThingsPlural().matches("1s"));
     }//end setQueenThingsPluralNumPass
+    @Test
+    public void setQueenThingsPluralTwoWordsPass()
+    {
+        Mad queen = new Mad();
+        queen.setThingsPlural("question marks");
+        assertTrue(queen.getThingsPlural().matches("question marks"));
+    }
 
     //fails
     @Test

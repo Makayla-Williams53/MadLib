@@ -195,5 +195,12 @@ class MadTest
         assertTrue(queen.getCloth().matches("monocle"));
     }//end setQueenClothSpecCharFail
 
-
+    //adjective tests
+    //passes
+    @Test
+    public void getQueenAdjectivePass()
+    {
+        Mad queen = new Mad();
+        assertTrue(queen.getAdjective().matches(""));
+    }//end getQueenAdjectivePass
 }

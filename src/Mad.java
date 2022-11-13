@@ -5,6 +5,7 @@ public class Mad
     private String place;
     private String adverb;
     private String cloth;
+    private String adjective;
 
     //default constructor
     public Mad()
@@ -82,5 +83,10 @@ public class Mad
             this.cloth = cloth;
         }//end else
     }//end setCloth
+
+    public String getAdjective()
+    {
+        return "";
+    }//end getAdjective
 
 }//end of Mad class

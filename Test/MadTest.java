@@ -331,4 +331,49 @@ class MadTest
         Mad queen = new Mad();
         assertTrue(queen.getVerb().matches(""));
     }//end getQueenVerbPass
-}
+    @Test
+    public void setQueenVerbPass()
+    {
+        Mad queen = new Mad();
+        queen.setVerb("run");
+        assertTrue(queen.getVerb().matches("run"));
+    }//end setQueenVerbPass
+
+    //fails
+    @Test
+    public void setQueenVerbIngFail()
+    {
+        Mad queen = new Mad();
+        queen.setVerb("running");
+        assertTrue(queen.getVerb().matches("skip"));
+    }//end setQueenVerbIngFail
+    @Test
+    public void setQueenVerbUpperFail()
+    {
+        Mad queen = new Mad();
+        queen.setVerb("Run");
+        assertTrue(queen.getVerb().matches("skip"));
+    }//end setQueenVerbUpperFail
+    @Test
+    public void setQueenVerbBlankFail()
+    {
+        Mad queen = new Mad();
+        queen.setVerb("");
+        assertTrue(queen.getVerb().matches("skip"));
+    }//end setQueenVerbBlankFail
+    @Test
+    public void setQueenVerbNumFail()
+    {
+        Mad queen = new Mad();
+        queen.setVerb("123");
+        assertTrue(queen.getVerb().matches("skip"));
+    }//end setQueenVerbNumFail
+    @Test
+    public void setQueenVerbSpecCharFail()
+    {
+        Mad queen = new Mad();
+        queen.setVerb("~!@\\");
+        assertTrue(queen.getVerb().matches("skip"));
+    }//end setQueenVerbSpecCharFail
+
+}//end class MadTest

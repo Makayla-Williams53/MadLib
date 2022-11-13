@@ -125,7 +125,19 @@ public class Mad
 
     public String getVerb()
     {
-        return "";
+        return verb;
     }//end getVerb
+
+    public void setVerb(String verb)
+    {
+        if(verb.matches("[a-z]+ing$") || !verb.matches("[a-z]+"))
+        {
+            this.verb = "skip";
+        }//end if
+        else
+        {
+            this.verb = verb;
+        }//end else
+    }//end setVerb
 
 }//end of Mad class

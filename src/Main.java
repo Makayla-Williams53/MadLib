@@ -14,8 +14,8 @@ public class Main
         queen.setThing(temp);
 
         //user input for the place
-        System.out.println("Please insert a place (if a word using only letters with an uppercase first letter is not entered \"Narnia\" will be the default)");
-        temp = scanner.next();
+        System.out.println("Please insert a place (if a word(s) using only letters with an uppercase first letter is not entered \"Narnia\" will be the default)");
+        temp = scanner.nextLine();
         queen.setPlace(temp);
 
         //user input for the adverb

@@ -66,6 +66,13 @@ class MadTest
         queen.setPlace("Bali");
         assertTrue(queen.getPlace().matches("Bali"));
     }//end of setQueenPlacePass
+    @Test
+    public void setQueenPlaceTwoWordsPass()
+    {
+        Mad queen = new Mad();
+        queen.setPlace("Aquarium of the Pacific");
+        assertTrue(queen.getPlace().matches("Aquarium of the Pacific"));
+    }//end setQueenPLaceTwoWordsPass
 
     //places fail
     @Test

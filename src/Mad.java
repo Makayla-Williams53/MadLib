@@ -14,6 +14,7 @@ public class Mad
         this.place = "";
         this.adverb = "";
         this.cloth = "";
+        this.adjective = "";
     }//end of default constructor
 
     public String getThing()
@@ -86,7 +87,19 @@ public class Mad
 
     public String getAdjective()
     {
-        return "";
+        return adjective;
     }//end getAdjective
+
+    public void setAdjective(String adjective)
+    {
+        if(adjective.matches("[A-Za-z]*ly$") || !adjective.matches("[a-z]+"))
+        {
+            this.adjective = "menacing";
+        }//end if
+        else
+        {
+            this.adjective = adjective;
+        }//end else
+    }//end setAdjective
 
 }//end of Mad class

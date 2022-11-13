@@ -203,4 +203,50 @@ class MadTest
         Mad queen = new Mad();
         assertTrue(queen.getAdjective().matches(""));
     }//end getQueenAdjectivePass
+
+    @Test
+    public void setQueenAdjectivePass()
+    {
+        Mad queen = new Mad();
+        queen.setAdjective("wonderful");
+        assertTrue(queen.getAdjective().matches("wonderful"));
+    }//end setQueenAdjectivePass
+
+    //fails
+    @Test
+    public void setQueenAdjectiveLyFail()
+    {
+        Mad queen = new Mad();
+        queen.setAdjective("wonderfully");
+        assertTrue(queen.getAdjective().matches("menacing"));
+    }//end setQueenAdjectiveLyFail
+    @Test
+    public void setQueenAdjectiveUpperFail()
+    {
+        Mad queen = new Mad();
+        queen.setAdjective("Wonderful");
+        assertTrue(queen.getAdjective().matches("menacing"));
+    }//end setQueenAdjectiveUpperFail
+    @Test
+    public void setQueenAdjectiveBlankFail()
+    {
+        Mad queen = new Mad();
+        queen.setAdjective("");
+        assertTrue(queen.getAdjective().matches("menacing"));
+    }//end setQueenAdjectiveBlankFail
+    @Test
+    public void setQueenAdjectiveNumFail()
+    {
+        Mad queen = new Mad();
+        queen.setAdjective("123");
+        assertTrue(queen.getAdjective().matches("menacing"));
+    }//end setQueenAdjectiveNumFail
+    @Test
+    public void setQueenAdjectiveSpecCharFail()
+    {
+        Mad queen = new Mad();
+        queen.setAdjective("!?~\\");
+        assertTrue(queen.getAdjective().matches("menacing"));
+    }//end setQueenAdjectiveSpecCharFail
+
 }

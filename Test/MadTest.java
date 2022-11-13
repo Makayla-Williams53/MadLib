@@ -95,7 +95,7 @@ class MadTest
         Mad queen = new Mad();
         queen.setPlace("");
         assertTrue(queen.getPlace().matches("Narnia"));
-    }
+    }//end setQueenPlaceBlankFail
 
     //adverb tests
     //passes
@@ -252,9 +252,61 @@ class MadTest
     //Thing plural test
     //passes
     @Test
-    public void getQueenThingPluralPass()
+    public void getQueenThingsPluralPass()
     {
         Mad queen = new Mad();
-        assertTrue(queen.getThingPlural().matches(""));
+        assertTrue(queen.getThingsPlural().matches(""));
     }//end test getQueenThingPluralPass
+    @Test
+    public void setQueenThingsPluralPass()
+    {
+        Mad queen = new Mad();
+        queen.setThingsPlural("donkeys");
+        assertTrue(queen.getThingsPlural().matches("donkeys"));
+    }//end setQueenThingsPluralPass
+    @Test
+    public void setQueenThingsPluralNumPass()
+    {
+        Mad queen = new Mad();
+        queen.setThingsPlural("1s");
+        assertTrue(queen.getThingsPlural().matches("1s"));
+    }//end setQueenThingsPluralNumPass
+
+    //fails
+    @Test
+    public void setQueenThingsPluralNoSFail()
+    {
+        Mad queen = new Mad();
+        queen.setThingsPlural("donkey");
+        assertTrue(queen.getThingsPlural().matches("pikachus"));
+    }//end setQueenThingsPluralNoSFail
+    @Test
+    public void setQueenThingsPluralUpperFail()
+    {
+        Mad queen = new Mad();
+        queen.setThingsPlural("Donkeys");
+        assertTrue(queen.getThingsPlural().matches("pikachus"));
+    }//end setQueenThingsPluralUpperFail
+    @Test
+    public void setQueenThingsPluralBlankFail()
+    {
+        Mad queen = new Mad();
+        queen.setThingsPlural("");
+        assertTrue(queen.getThingsPlural().matches("pikachus"));
+    }//end setQueenThingsPluralBlankFail
+    @Test
+    public void setQueenThingsPluralSpecCharFail()
+    {
+        Mad queen = new Mad();
+        queen.setThingsPlural("!s");
+        assertTrue(queen.getThingsPlural().matches("pikachus"));
+    }//end setQueenThingsPluralSpecCharFail
+    @Test
+    public void setQueenThingsPluralJustSFail()
+    {
+        Mad queen = new Mad();
+        queen.setThingsPlural("s");
+        assertTrue(queen.getThingsPlural().matches("pikachus"));
+    }//end setQueenThingsPluralJustSFail
+
 }

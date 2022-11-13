@@ -6,7 +6,7 @@ public class Mad
     private String adverb;
     private String cloth;
     private String adjective;
-    private String thingPlural;
+    private String thingsPlural;
 
     //default constructor
     public Mad()
@@ -16,7 +16,7 @@ public class Mad
         this.adverb = "";
         this.cloth = "";
         this.adjective = "";
-        this.thingPlural = "";
+        this.thingsPlural = "";
     }//end of default constructor
 
     public String getThing()
@@ -104,6 +104,21 @@ public class Mad
         }//end else
     }//end setAdjective
 
+    public String getThingsPlural()
+    {
+        return thingsPlural;
+    }//end getThingPlural
 
+    public void setThingsPlural(String thingsPlural)
+    {
+        if(!thingsPlural.matches("[a-z0-9]+s$"))
+        {
+            this.thingsPlural = "pikachus";
+        }//end if
+        else
+        {
+            this.thingsPlural = thingsPlural;
+        }//end else
+    }//end setThingsPlural
 
 }//end of Mad class

@@ -376,4 +376,13 @@ class MadTest
         assertTrue(queen.getVerb().matches("skip"));
     }//end setQueenVerbSpecCharFail
 
+    //Adjective2 tests
+    //passes
+    @Test
+    public void getQueenAdjective2Pass()
+    {
+        Mad queen = new Mad();
+        assertTrue(queen.getAdjective2().matches(""));
+    }//end getQueenAdjective2Pass
+
 }//end class MadTest

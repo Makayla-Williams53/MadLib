@@ -323,4 +323,12 @@ class MadTest
         assertTrue(queen.getThingsPlural().matches("pikachus"));
     }//end setQueenThingsPluralJustSFail
 
+    //Verb tests
+    //passes
+    @Test
+    public void getQueenVerbPass()
+    {
+        Mad queen = new Mad();
+        assertTrue(queen.getVerb().matches(""));
+    }//end getQueenVerbPass
 }

@@ -7,6 +7,7 @@ public class Mad
     private String cloth;
     private String adjective;
     private String thingsPlural;
+    private String verb;
 
     //default constructor
     public Mad()
@@ -17,6 +18,7 @@ public class Mad
         this.cloth = "";
         this.adjective = "";
         this.thingsPlural = "";
+        this.verb = "";
     }//end of default constructor
 
     public String getThing()
@@ -120,5 +122,10 @@ public class Mad
             this.thingsPlural = thingsPlural;
         }//end else
     }//end setThingsPlural
+
+    public String getVerb()
+    {
+        return "";
+    }//end getVerb
 
 }//end of Mad class

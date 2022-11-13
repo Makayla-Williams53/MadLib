@@ -77,7 +77,7 @@ public class Mad
 
     public void setCloth(String cloth)
     {
-        if(!cloth.matches("[a-z]+"))
+        if(!cloth.matches("[a-z\s]+"))
         {
             this.cloth = "monocle";
         }//end if

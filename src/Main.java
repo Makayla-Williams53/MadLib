@@ -30,7 +30,7 @@ public class Main
 
         //user input for the adjective
         System.out.println("Please insert an adjective (if a word using only lowercase letters with a \"ly\" ending is not entered \"menacing\" will be the default");
-        temp = scanner.next();
+        temp = scanner.nextLine();
         queen.setAdjective(temp);
 
         System.out.println("Please insert things plural (if a word(s) using letters or numbers with an \"s\" ending is not entered \"pikachus\" will be the default");

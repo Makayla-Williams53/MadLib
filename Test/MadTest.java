@@ -164,6 +164,13 @@ class MadTest
         queen.setCloth("trousers");
         assertTrue(queen.getCloth().matches("trousers"));
     }//end setQueenClothPass
+    @Test
+    public void setQueenClothTwoWordsPass()
+    {
+        Mad queen = new Mad();
+        queen.setCloth("pinstripe suit");
+        assertTrue(queen.getCloth().matches("pinstripe suit"));
+    }
 
     //tests fail
     @Test

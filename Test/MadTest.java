@@ -384,5 +384,49 @@ class MadTest
         Mad queen = new Mad();
         assertTrue(queen.getAdjective2().matches(""));
     }//end getQueenAdjective2Pass
+    @Test
+    public void setQueenAdjective2Pass()
+    {
+        Mad queen = new Mad();
+        queen.setAdjective2("whimsical");
+        assertTrue(queen.getAdjective2().matches("whimsical"));
+    }//end setQueenAdjective2Pass
+
+    //fails
+    @Test
+    public void setQueenAdjective2LyFail()
+    {
+        Mad queen = new Mad();
+        queen.setAdjective2("whimsically");
+        assertTrue(queen.getAdjective2().matches("glamorous"));
+    }//end setQueenAdjective2LyFail
+    @Test
+    public void setQueenAdjective2UpperFail()
+    {
+        Mad queen = new Mad();
+        queen.setAdjective2("Whimsical");
+        assertTrue(queen.getAdjective2().matches("glamorous"));
+    }//end setQueenAdjective2UpperFail
+    @Test
+    public void setQueenAdjective2BlankFail()
+    {
+        Mad queen = new Mad();
+        queen.setAdjective2("");
+        assertTrue(queen.getAdjective2().matches("glamorous"));
+    }//end setQueenAdjective2BlankFail
+    @Test
+    public void setQueenAdjective2NumFail()
+    {
+        Mad queen = new Mad();
+        queen.setAdjective2("123");
+        assertTrue(queen.getAdjective2().matches("glamorous"));
+    }// end setQueenAdjective2NumFail
+    @Test
+    public void setQueenAdjective2SpecCharFail()
+    {
+        Mad queen = new Mad();
+        queen.setAdjective2("123");
+        assertTrue(queen.getAdjective2().matches("glamorous"));
+    }// end setQueenAdjective2SpecCharFail
 
 }//end class MadTest

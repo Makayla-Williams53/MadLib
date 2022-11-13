@@ -144,7 +144,19 @@ public class Mad
 
     public String getAdjective2()
     {
-        return "";
+        return adjective2;
     }//end getAdjective2
+
+    public void setAdjective2(String adjective2)
+    {
+        if(adjective2.matches("[A-Za-z]*ly$") || !adjective2.matches("[a-z]+"))
+        {
+            this.adjective2 = "glamorous";
+        }//end if
+        else
+        {
+            this.adjective2 = adjective2;
+        }//end else
+    }
 
 }//end of Mad class

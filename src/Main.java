@@ -32,7 +32,6 @@ public class Main
         System.out.println("Please insert an adjective (if a word using only lowercase letters without an \"ly\" ending is not entered \"menacing\" will be the default");
         temp = scanner.next();
         queen.setAdjective(temp);
-        System.out.println(queen.getAdjective());
 
 
     }//end of main method

@@ -249,4 +249,12 @@ class MadTest
         assertTrue(queen.getAdjective().matches("menacing"));
     }//end setQueenAdjectiveSpecCharFail
 
+    //Thing plural test
+    //passes
+    @Test
+    public void getQueenThingPluralPass()
+    {
+        Mad queen = new Mad();
+        assertTrue(queen.getThingPlural().matches(""));
+    }//end test getQueenThingPluralPass
 }

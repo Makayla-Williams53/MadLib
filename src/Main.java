@@ -37,6 +37,10 @@ public class Main
         temp = scanner.nextLine();
         queen.setThingsPlural(temp);
 
+        System.out.println("Please insert a verb in the present tense (if a word using only lowercase letters without an \"ing\" ending is not entered \"skip\" will be the default");
+        temp = scanner.next();
+        queen.setVerb(temp);
+
 
     }//end of main method
 }//end of Main class

@@ -53,5 +53,10 @@ public class Main
         temp = scanner.nextLine();
         queen.setPlace2(temp);
 
+        //user input for the phrase
+        System.out.println("Please insert a phrase (if a word(s) using at least one letter or number is not entered \"an eye for an eye buckaroo\" will be the default)");
+        temp = scanner.nextLine();
+        queen.setPhrase(temp);
+
     }//end of main method
 }//end of Main class

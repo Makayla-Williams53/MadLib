@@ -489,4 +489,20 @@ class MadTest
         assertTrue(queen.getPlace2().matches("Aquarium of the Pacific"));
     }//end setQueenPlace2SpecCharFail
 
+    //phrase tests
+    //passes
+    @Test
+    public void getQueenPhrasePass()
+    {
+        Mad queen = new Mad();
+        assertTrue(queen.getPhrase().matches(""));
+    }
+    @Test
+    public void setQueenPhrasePass()
+    {
+        Mad queen = new Mad();
+        queen.setPhrase("eureka");
+        assertTrue(queen.getPhrase().matches("eureka"));
+    }
+
 }//end class MadTest

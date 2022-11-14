@@ -10,6 +10,7 @@ public class Mad
     private String verb;
     private String adjective2;
     private String place2;
+    private String phrase;
 
     //default constructor
     public Mad()
@@ -23,6 +24,7 @@ public class Mad
         this.verb = "";
         this.adjective2 = "";
         this.place2 = "";
+        this.phrase = "";
     }//end of default constructor
 
     public String getThing()
@@ -177,5 +179,15 @@ public class Mad
             this.place2 = place2;
         }//end of else
     }//end setPlace2
+
+    public String getPhrase()
+    {
+        return phrase;
+    }//end getPhrase
+
+    public void setPhrase(String phrase)
+    {
+        this.phrase = phrase;
+    }
 
 }//end of Mad class

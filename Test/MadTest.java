@@ -436,4 +436,57 @@ class MadTest
         assertTrue(queen.getAdjective2().matches("glamorous"));
     }// end setQueenAdjective2SpecCharFail
 
+    //Place2 test
+    //passes
+    @Test
+    public void getQueenPlace2Pass()
+    {
+        Mad queen = new Mad();
+        assertTrue(queen.getPlace2().matches(""));
+    }//end getQueenPlace2Pass
+    @Test
+    public void setQueenPlace2Pass()
+    {
+        Mad queen = new Mad();
+        queen.setPlace2("Canada");
+        assertTrue(queen.getPlace2().matches("Canada"));
+    }//end setQueenPlace2Pass
+    @Test
+    public void setQueenPlace2TwoWordPass()
+    {
+        Mad queen = new Mad();
+        queen.setPlace2("Chuck E Cheese");
+        assertTrue(queen.getPlace2().matches("Chuck E Cheese"));
+    }//end setQueenPlace2TwoWordPass
+
+    //fails
+    @Test
+    public void setQueenPlace2NoUpperFail()
+    {
+        Mad queen = new Mad();
+        queen.setPlace2("canada");
+        assertTrue(queen.getPlace2().matches("Aquarium of the Pacific"));
+    }//end setQueenPlace2NoUpperFail
+    @Test
+    public void setQueenPlace2BlankFail()
+    {
+        Mad queen = new Mad();
+        queen.setPlace2("");
+        assertTrue(queen.getPlace2().matches("Aquarium of the Pacific"));
+    }//end setQueenPlace2BlankFail
+    @Test
+    public void setQueenPlace2NumFail()
+    {
+        Mad queen = new Mad();
+        queen.setPlace2("123");
+        assertTrue(queen.getPlace2().matches("Aquarium of the Pacific"));
+    }//end setQueenPlace2NumFail
+    @Test
+    public void setQueenPlace2SpecCharFail()
+    {
+        Mad queen = new Mad();
+        queen.setPlace2("!@~`");
+        assertTrue(queen.getPlace2().matches("Aquarium of the Pacific"));
+    }//end setQueenPlace2SpecCharFail
+
 }//end class MadTest

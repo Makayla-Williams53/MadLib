@@ -9,6 +9,7 @@ public class Mad
     private String thingsPlural;
     private String verb;
     private String adjective2;
+    private String place2;
 
     //default constructor
     public Mad()
@@ -21,6 +22,7 @@ public class Mad
         this.thingsPlural = "";
         this.verb = "";
         this.adjective2 = "";
+        this.place2 = "";
     }//end of default constructor
 
     public String getThing()
@@ -158,5 +160,22 @@ public class Mad
             this.adjective2 = adjective2;
         }//end else
     }//end setAdjective2
+
+    public String getPlace2()
+    {
+        return place2;
+    }//end getPlace2
+
+    public void setPlace2(String place2)
+    {
+        if(!place2.matches("[A-Z][a-zA-z\s]*"))
+        {
+            this.place2 = "Aquarium of the Pacific";
+        }//end of if
+        else
+        {
+            this.place2 = place2;
+        }//end of else
+    }//end setPlace2
 
 }//end of Mad class

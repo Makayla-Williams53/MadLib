@@ -187,7 +187,14 @@ public class Mad
 
     public void setPhrase(String phrase)
     {
-        this.phrase = phrase;
-    }
+        if(!phrase.matches("[a-zA-z0-9\s]+.*"))
+        {
+            this.phrase = "an eye for an eye buckaroo";
+        }//end if
+        else
+        {
+            this.phrase = phrase;
+        }//end else
+    }//end setPhrase
 
 }//end of Mad class

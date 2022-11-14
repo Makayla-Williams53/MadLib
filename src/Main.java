@@ -10,7 +10,7 @@ public class Main
 
         //user input for the thing
         System.out.println("Please insert a thing (if a word using only letters all lowercase is not entered \"bug\" will be the default)");
-        temp = scanner.next();
+        temp = scanner.nextLine();
         queen.setThing(temp);
 
         //user input for the place
@@ -20,7 +20,7 @@ public class Main
 
         //user input for the adverb
         System.out.println("Please insert an adverb ending in \"ly\" (if a word using only letters with an ending of \"ly\" is not entered \"charismatically\" will be the default)");
-        temp = scanner.next();
+        temp = scanner.nextLine();
         queen.setAdverb(temp);
 
         //user input for the clothing
@@ -30,7 +30,7 @@ public class Main
 
         //user input for the adjective
         System.out.println("Please insert an adjective (if a word using only lowercase letters without a \"ly\" ending is not entered \"menacing\" will be the default)");
-        temp = scanner.next();
+        temp = scanner.nextLine();
         queen.setAdjective(temp);
 
         //user input for the things
@@ -40,12 +40,12 @@ public class Main
 
         //user input for the verb
         System.out.println("Please insert a verb in the present tense (if a word using only lowercase letters without an \"ing\" ending is not entered \"skip\" will be the default)");
-        temp = scanner.next();
+        temp = scanner.nextLine();
         queen.setVerb(temp);
 
         //user input for the second adjective
         System.out.println("Please insert an adjective (if a word using only lowercase letters without a \"ly\" ending is not entered \"whimsical\" will be the default)");
-        temp = scanner.next();
+        temp = scanner.nextLine();
         queen.setAdjective2(temp);
 
         //user input for the second place
@@ -57,6 +57,11 @@ public class Main
         System.out.println("Please insert a phrase (if a word(s) using at least one letter or number is not entered \"an eye for an eye buckaroo\" will be the default)");
         temp = scanner.nextLine();
         queen.setPhrase(temp);
+
+        System.out.println("\nToday I met the Queen of " + queen.getPlace2() + " during a quick trip to " + queen.getPlace() + ". I had left the house because I really needed to pick up a dozen \n" +
+                queen.getThingsPlural() + " in order to repair my " + queen.getThing() + ". I wasn't planning on meeting her or I probably wouldn't have worm my " + queen.getAdjective2() + "\n" +
+                queen.getCloth() + ". I know most people would have bowed, but I forgot and decided to " + queen.getVerb() + " " + queen.getAdverb() + " instead. She smiled politely and then \n" +
+                "said, '" + queen.getPhrase() + ".'");
 
     }//end of main method
 }//end of Main class

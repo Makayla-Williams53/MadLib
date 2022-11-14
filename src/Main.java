@@ -33,17 +33,25 @@ public class Main
         temp = scanner.next();
         queen.setAdjective(temp);
 
+        //user input for the things
         System.out.println("Please insert things plural (if a word(s) using letters or numbers with an \"s\" ending is not entered \"pikachus\" will be the default)");
         temp = scanner.nextLine();
         queen.setThingsPlural(temp);
 
+        //user input for the verb
         System.out.println("Please insert a verb in the present tense (if a word using only lowercase letters without an \"ing\" ending is not entered \"skip\" will be the default)");
         temp = scanner.next();
         queen.setVerb(temp);
 
+        //user input for the second adjective
         System.out.println("Please insert an adjective (if a word using only lowercase letters without a \"ly\" ending is not entered \"whimsical\" will be the default)");
         temp = scanner.next();
         queen.setAdjective2(temp);
+
+        //user input for the second place
+        System.out.println("Please insert a place (if a word(s) using only letters with an uppercase first letter is not entered \"Aquarium of the Pacific\" will be the default)");
+        temp = scanner.nextLine();
+        queen.setPlace2(temp);
 
     }//end of main method
 }//end of Main class
